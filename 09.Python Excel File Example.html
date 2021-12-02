@@ -13151,58 +13151,6 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-4-0f0eae8f6fab&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> df = pd.read_excel('09.1976-2016-president.xlsx', 
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold">                    sheet_name = '1976-2016-president')
-</span>
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python37\site-packages\pandas\util\_decorators.py</span> in <span class="ansi-cyan-fg">wrapper</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwargs)</span>
-<span class="ansi-green-fg">    297</span>                 )
-<span class="ansi-green-fg">    298</span>                 warnings<span class="ansi-yellow-intense-fg ansi-bold">.</span>warn<span class="ansi-yellow-intense-fg ansi-bold">(</span>msg<span class="ansi-yellow-intense-fg ansi-bold">,</span> FutureWarning<span class="ansi-yellow-intense-fg ansi-bold">,</span> stacklevel<span class="ansi-yellow-intense-fg ansi-bold">=</span>stacklevel<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 299</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">return</span> func<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    300</span> 
-<span class="ansi-green-fg">    301</span>         <span class="ansi-green-intense-fg ansi-bold">return</span> wrapper
-
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python37\site-packages\pandas\io\excel\_base.py</span> in <span class="ansi-cyan-fg">read_excel</span><span class="ansi-blue-intense-fg ansi-bold">(io, sheet_name, header, names, index_col, usecols, squeeze, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, mangle_dupe_cols, storage_options)</span>
-<span class="ansi-green-fg">    334</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> isinstance<span class="ansi-yellow-intense-fg ansi-bold">(</span>io<span class="ansi-yellow-intense-fg ansi-bold">,</span> ExcelFile<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    335</span>         should_close <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 336</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>io <span class="ansi-yellow-intense-fg ansi-bold">=</span> ExcelFile<span class="ansi-yellow-intense-fg ansi-bold">(</span>io<span class="ansi-yellow-intense-fg ansi-bold">,</span> storage_options<span class="ansi-yellow-intense-fg ansi-bold">=</span>storage_options<span class="ansi-yellow-intense-fg ansi-bold">,</span> engine<span class="ansi-yellow-intense-fg ansi-bold">=</span>engine<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    337</span>     <span class="ansi-green-intense-fg ansi-bold">elif</span> engine <span class="ansi-green-intense-fg ansi-bold">and</span> engine <span class="ansi-yellow-intense-fg ansi-bold">!=</span> io<span class="ansi-yellow-intense-fg ansi-bold">.</span>engine<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    338</span>         raise ValueError(
-
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python37\site-packages\pandas\io\excel\_base.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self, path_or_buffer, engine, storage_options)</span>
-<span class="ansi-green-fg">   1070</span>             <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1071</span>                 ext = inspect_excel_format(
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1072</span><span class="ansi-yellow-intense-fg ansi-bold">                     </span>content<span class="ansi-yellow-intense-fg ansi-bold">=</span>path_or_buffer<span class="ansi-yellow-intense-fg ansi-bold">,</span> storage_options<span class="ansi-yellow-intense-fg ansi-bold">=</span>storage_options
-<span class="ansi-green-fg">   1073</span>                 )
-<span class="ansi-green-fg">   1074</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python37\site-packages\pandas\io\excel\_base.py</span> in <span class="ansi-cyan-fg">inspect_excel_format</span><span class="ansi-blue-intense-fg ansi-bold">(path, content, storage_options)</span>
-<span class="ansi-green-fg">    948</span> 
-<span class="ansi-green-fg">    949</span>     with get_handle(
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 950</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>content_or_path<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">"rb"</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> storage_options<span class="ansi-yellow-intense-fg ansi-bold">=</span>storage_options<span class="ansi-yellow-intense-fg ansi-bold">,</span> is_text<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">False</span>
-<span class="ansi-green-fg">    951</span>     ) as handle:
-<span class="ansi-green-fg">    952</span>         stream <span class="ansi-yellow-intense-fg ansi-bold">=</span> handle<span class="ansi-yellow-intense-fg ansi-bold">.</span>handle
-
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python37\site-packages\pandas\io\common.py</span> in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-intense-fg ansi-bold">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="ansi-green-fg">    649</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    650</span>             <span class="ansi-red-intense-fg ansi-bold"># Binary mode</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 651</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>handle <span class="ansi-yellow-intense-fg ansi-bold">=</span> open<span class="ansi-yellow-intense-fg ansi-bold">(</span>handle<span class="ansi-yellow-intense-fg ansi-bold">,</span> ioargs<span class="ansi-yellow-intense-fg ansi-bold">.</span>mode<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    652</span>         handles<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span>handle<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    653</span> 
-
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: [Errno 2] No such file or directory: '09.1976-2016-president.xlsx'</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13224,15 +13172,131 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-5-d7a68a66faa4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>df<span class="ansi-yellow-intense-fg ansi-bold">.</span>head<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-red-intense-fg ansi-bold"># NOTE: if you are running this script in Thonny, you must write print(df.head()) #</span>
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>state</th>
+<th>state_po</th>
+<th>state_fips</th>
+<th>state_cen</th>
+<th>state_ic</th>
+<th>office</th>
+<th>candidate</th>
+<th>party</th>
+<th>writein</th>
+<th>candidatevotes</th>
+<th>totalvotes</th>
+<th>version</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Carter, Jimmy</td>
+<td>democrat</td>
+<td>False</td>
+<td>659170</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Ford, Gerald</td>
+<td>republican</td>
+<td>False</td>
+<td>504070</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Maddox, Lester</td>
+<td>american independent party</td>
+<td>False</td>
+<td>9198</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Bubar, Benjamin ""Ben""</td>
+<td>prohibition</td>
+<td>False</td>
+<td>6669</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Hall, Gus</td>
+<td>communist party use</td>
+<td>False</td>
+<td>1954</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -13258,15 +13322,165 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-9c149f624e09&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>df<span class="ansi-yellow-intense-fg ansi-bold">.</span>head<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">7</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-red-intense-fg ansi-bold"># NOTE: if you are running this script in Thonny, you must write print(df.head(7)) #</span>
+<div class="prompt output_prompt">Out[6]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>state</th>
+<th>state_po</th>
+<th>state_fips</th>
+<th>state_cen</th>
+<th>state_ic</th>
+<th>office</th>
+<th>candidate</th>
+<th>party</th>
+<th>writein</th>
+<th>candidatevotes</th>
+<th>totalvotes</th>
+<th>version</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Carter, Jimmy</td>
+<td>democrat</td>
+<td>False</td>
+<td>659170</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Ford, Gerald</td>
+<td>republican</td>
+<td>False</td>
+<td>504070</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Maddox, Lester</td>
+<td>american independent party</td>
+<td>False</td>
+<td>9198</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Bubar, Benjamin ""Ben""</td>
+<td>prohibition</td>
+<td>False</td>
+<td>6669</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Hall, Gus</td>
+<td>communist party use</td>
+<td>False</td>
+<td>1954</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>5</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>Macbride, Roger</td>
+<td>libertarian</td>
+<td>False</td>
+<td>1481</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>6</th>
+<td>1976</td>
+<td>Alabama</td>
+<td>AL</td>
+<td>1</td>
+<td>63</td>
+<td>41</td>
+<td>US President</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>True</td>
+<td>308</td>
+<td>1182850</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -13292,15 +13506,131 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-a0939b4730d6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>df<span class="ansi-yellow-intense-fg ansi-bold">.</span>tail<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-red-intense-fg ansi-bold"># NOTE: if you are running this script in Thonny, you must write print(df.tail()) #</span>
+<div class="prompt output_prompt">Out[7]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>state</th>
+<th>state_po</th>
+<th>state_fips</th>
+<th>state_cen</th>
+<th>state_ic</th>
+<th>office</th>
+<th>candidate</th>
+<th>party</th>
+<th>writein</th>
+<th>candidatevotes</th>
+<th>totalvotes</th>
+<th>version</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>3735</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>True</td>
+<td>6904</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3736</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>NaN</td>
+<td>independent</td>
+<td>False</td>
+<td>3224</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3737</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Blank Vote</td>
+<td>NaN</td>
+<td>False</td>
+<td>2661</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3738</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Castle, Darrell L.</td>
+<td>constitution party</td>
+<td>False</td>
+<td>2042</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3739</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Over Vote</td>
+<td>NaN</td>
+<td>False</td>
+<td>278</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -13326,15 +13656,148 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-8-3660f95adcff&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>df<span class="ansi-yellow-intense-fg ansi-bold">.</span>tail<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">6</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-red-intense-fg ansi-bold"># NOTE: if you are running this script in Thonny, you must write print(df.tail()) #</span>
+<div class="prompt output_prompt">Out[8]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>state</th>
+<th>state_po</th>
+<th>state_fips</th>
+<th>state_cen</th>
+<th>state_ic</th>
+<th>office</th>
+<th>candidate</th>
+<th>party</th>
+<th>writein</th>
+<th>candidatevotes</th>
+<th>totalvotes</th>
+<th>version</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>3734</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Johnson, Gary</td>
+<td>libertarian</td>
+<td>False</td>
+<td>13287</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3735</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>True</td>
+<td>6904</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3736</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>NaN</td>
+<td>independent</td>
+<td>False</td>
+<td>3224</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3737</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Blank Vote</td>
+<td>NaN</td>
+<td>False</td>
+<td>2661</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3738</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Castle, Darrell L.</td>
+<td>constitution party</td>
+<td>False</td>
+<td>2042</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3739</th>
+<td>2016</td>
+<td>Wyoming</td>
+<td>WY</td>
+<td>56</td>
+<td>83</td>
+<td>68</td>
+<td>US President</td>
+<td>Over Vote</td>
+<td>NaN</td>
+<td>False</td>
+<td>278</td>
+<td>258788</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -13386,22 +13849,6 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-10-b12921290806&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>cond1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> df<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'year'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">==</span> election_year
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13417,22 +13864,6 @@ div#notebook {
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">cond2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'state'</span><span class="p">]</span> <span class="o">==</span> <span class="n">birth_state</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-11-471de9e2b9c9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>cond2 <span class="ansi-yellow-intense-fg ansi-bold">=</span> df<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'state'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">==</span> birth_state
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13458,16 +13889,148 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-12-e7b531b00ac7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>results <span class="ansi-yellow-intense-fg ansi-bold">=</span> df<span class="ansi-yellow-intense-fg ansi-bold">[</span>cond1 <span class="ansi-yellow-intense-fg ansi-bold">&amp;</span> cond2<span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      2</span> results <span class="ansi-red-intense-fg ansi-bold"># NOTE: if you are running this script in Thonny, you must write print(results) #</span>
+<div class="prompt output_prompt">Out[12]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'df' is not defined</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>state</th>
+<th>state_po</th>
+<th>state_fips</th>
+<th>state_cen</th>
+<th>state_ic</th>
+<th>office</th>
+<th>candidate</th>
+<th>party</th>
+<th>writein</th>
+<th>candidatevotes</th>
+<th>totalvotes</th>
+<th>version</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1115</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Bush, George H.W.</td>
+<td>republican</td>
+<td>False</td>
+<td>883702</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1116</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Dukakis, Michael</td>
+<td>democrat</td>
+<td>False</td>
+<td>717460</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1117</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Duke, David</td>
+<td>populist</td>
+<td>False</td>
+<td>18612</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1118</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Paul, Ronald ""Ron""</td>
+<td>libertarian</td>
+<td>False</td>
+<td>4115</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1119</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Fulani, Lenora</td>
+<td>new alliance</td>
+<td>False</td>
+<td>2355</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1120</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Larouche, Lyndon, Jr.</td>
+<td>national economic recovery</td>
+<td>False</td>
+<td>1958</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -13494,16 +14057,80 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-13-76a8fa35e353&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>data <span class="ansi-yellow-intense-fg ansi-bold">=</span> results<span class="ansi-yellow-intense-fg ansi-bold">.</span>sort_values<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">'candidatevotes'</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> ascending <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">False</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>head<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      2</span> data <span class="ansi-red-intense-fg ansi-bold"># NOTE: if you are running this script in Thonny, you must write print(data) #</span>
+<div class="prompt output_prompt">Out[13]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'results' is not defined</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>state</th>
+<th>state_po</th>
+<th>state_fips</th>
+<th>state_cen</th>
+<th>state_ic</th>
+<th>office</th>
+<th>candidate</th>
+<th>party</th>
+<th>writein</th>
+<th>candidatevotes</th>
+<th>totalvotes</th>
+<th>version</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1115</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Bush, George H.W.</td>
+<td>republican</td>
+<td>False</td>
+<td>883702</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1116</th>
+<td>1988</td>
+<td>Louisiana</td>
+<td>LA</td>
+<td>22</td>
+<td>72</td>
+<td>45</td>
+<td>US President</td>
+<td>Dukakis, Michael</td>
+<td>democrat</td>
+<td>False</td>
+<td>717460</td>
+<td>1628202</td>
+<td>20171015</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -13526,25 +14153,6 @@ div#notebook {
 <span class="n">winner_vote</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'candidatevotes'</span><span class="p">]</span>
 <span class="n">runner_vote</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">'candidatevotes'</span><span class="p">]</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-14-e81697c6add3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>winner_name <span class="ansi-yellow-intense-fg ansi-bold">=</span> data<span class="ansi-yellow-intense-fg ansi-bold">.</span>iloc<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'candidate'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      2</span> winner_party <span class="ansi-yellow-intense-fg ansi-bold">=</span> data<span class="ansi-yellow-intense-fg ansi-bold">.</span>iloc<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'party'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      3</span> winner_vote <span class="ansi-yellow-intense-fg ansi-bold">=</span> data<span class="ansi-yellow-intense-fg ansi-bold">.</span>iloc<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'candidatevotes'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      4</span> runner_vote <span class="ansi-yellow-intense-fg ansi-bold">=</span> data<span class="ansi-yellow-intense-fg ansi-bold">.</span>iloc<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'candidatevotes'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'data' is not defined</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13574,22 +14182,8 @@ div#notebook {
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>In the 1988 U.S. Presidential election,</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-15-534ef471b7da&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">'In the '</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> str<span class="ansi-yellow-intense-fg ansi-bold">(</span>election_year<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">' U.S. Presidential election,'</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> end<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">''</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">' the presidential candidate '</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> winner_name <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">' ('</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> end<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">''</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      3</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>winner_party <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">') won by '</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> str<span class="ansi-yellow-intense-fg ansi-bold">(</span>winner_vote <span class="ansi-yellow-intense-fg ansi-bold">-</span> runner_vote<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">' '</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> end<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">''</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      4</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">'votes with '</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> str<span class="ansi-yellow-intense-fg ansi-bold">(</span>winner_vote<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">' total votes in '</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> birth_state <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">'.'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'winner_name' is not defined</pre>
+<pre>In the 1988 U.S. Presidential election, the presidential candidate Bush, George H.W. (republican) won by 166242 votes with 883702 total votes in Louisiana.
+</pre>
 </div>
 </div>
 </div>
