@@ -4,7 +4,7 @@
 # In[1]:
 
 
-f = open("datasets/cfb_school_standings_2019.csv").read()
+f = open("datasets/cfb_school_standings_2020.csv").read()
 
 
 # In[2]:
@@ -67,8 +67,9 @@ team_names = []
 ppgs = []
 
 for cell in cells:
-    team_names.append(cell[1])
-    ppgs.append(float(cell[9]) - float(cell[10]))
+    if cell[9].strip() != '' and cell[10].strip() != '':
+        team_names.append(cell[1])
+        ppgs.append(float(cell[9]) - float(cell[10]))
 
 
 # In[11]:
