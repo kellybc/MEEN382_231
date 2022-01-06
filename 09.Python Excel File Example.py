@@ -24,7 +24,7 @@ birth_state = 'Louisiana'
 # In[4]:
 
 
-df = pd.read_excel('09.1976-2016-president.xlsx', 
+df = pd.read_excel('datasets/1976-2016-president.xlsx', 
                    sheet_name = '1976-2016-president')
 
 
