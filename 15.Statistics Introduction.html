@@ -13716,7 +13716,7 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">'./datasets/exam_grades.csv'</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">'datasets/exam_grades.csv'</span>
 </pre></div>
 </div>
 </div>
@@ -13757,22 +13757,6 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-380a6456aff8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>file <span class="ansi-yellow-intense-fg ansi-bold">=</span> open<span class="ansi-yellow-intense-fg ansi-bold">(</span>filename<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>read<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>strip<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: [Errno 2] No such file or directory: './datasets/exam_grades.csv'</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13788,22 +13772,6 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rows</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-8-6d6dd8fcde4d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>rows <span class="ansi-yellow-intense-fg ansi-bold">=</span> file<span class="ansi-yellow-intense-fg ansi-bold">.</span>split<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">'\n'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'file' is not defined</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13828,15 +13796,9 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-9-44ac187d7a6d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>rows<span class="ansi-yellow-intense-fg ansi-bold">.</span>pop<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'rows' is not defined</pre>
+<div class="prompt output_prompt">Out[9]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>'exam grades'</pre>
 </div>
 </div>
 </div>
@@ -13856,22 +13818,6 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">]</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-10-70b4d3d29748&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>data <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>int<span class="ansi-yellow-intense-fg ansi-bold">(</span>r<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">for</span> r <span class="ansi-green-intense-fg ansi-bold">in</span> rows<span class="ansi-yellow-intense-fg ansi-bold">]</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'rows' is not defined</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13898,15 +13844,9 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-11-fa91f0c51dd7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>n <span class="ansi-yellow-intense-fg ansi-bold">=</span> len<span class="ansi-yellow-intense-fg ansi-bold">(</span>data<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      2</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>n<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'data' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>466
+</pre>
 </div>
 </div>
 </div>
@@ -13959,24 +13899,8 @@ $$ \sigma = \sqrt{\sum_{i = 1}^N \frac{\left( x_i - \mu \right)^2}{N}} $$
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-13-9286426f1f9a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> fig<span class="ansi-yellow-intense-fg ansi-bold">,</span> ax <span class="ansi-yellow-intense-fg ansi-bold">=</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>subplots<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>ax<span class="ansi-yellow-intense-fg ansi-bold">.</span>hist<span class="ansi-yellow-intense-fg ansi-bold">(</span>data<span class="ansi-yellow-intense-fg ansi-bold">,</span> bins <span class="ansi-yellow-intense-fg ansi-bold">=</span> B<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      4</span> 
-<span class="ansi-green-fg">      5</span> ax<span class="ansi-yellow-intense-fg ansi-bold">.</span>set_title<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">'Exam Grade Occurance'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'data' is not defined</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
 <div class="output_png output_subarea">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "/>
 </div>
 </div>
